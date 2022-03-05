@@ -27,7 +27,9 @@ class NavBar extends Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="justify-content-center" style={{ flex: 1 }}>
             <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="aboutUs">AboutUs</Nav.Link>
             <Nav.Link href="/rooms">Rooms</Nav.Link>
+             <Nav.Link href="/restaurant">Restaurant</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

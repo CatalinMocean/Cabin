@@ -1,6 +1,7 @@
 import React from "react";
 import { FaBed, FaParking, FaUtensils, FaWifi } from "react-icons/fa";
 import Title from "../title/title";
+import { Link } from 'react-router-dom';
 
 export default function Services() {
   const services = [
@@ -15,8 +16,9 @@ export default function Services() {
     },
 
     {
-      icon: <FaUtensils />,
+      icon: <FaUtensils style={{fill: "#af9a7d"}}/>,
       title: "Restaurant",
+      link: '/restaurant'
     },
 
     {
@@ -32,7 +34,7 @@ export default function Services() {
         {services.map((item, index) => {
           return (
             <article key={index} className="service">
-              <span>{item.icon}</span>
+              <span>{item.link ? <Link to={item.link}>{item.icon}</Link> : item.icon}</span>
               <h6>{item.title}</h6>
             </article>
           );

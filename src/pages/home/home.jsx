@@ -4,11 +4,19 @@ import Banner from "../../components/banner/banner";
 import { Link } from "react-router-dom";
 import Services from "../../components/services/services";
 
+
+const bannerStyle = {
+      position: 'absolute',
+      zIndex: 2,
+      top: '40%',
+      right: '38%'
+}
+
 const Home = () => {
   return (
     <div>
       <Carousel>
-        <Banner title="Cabin" subtitle="rooms">
+        <Banner title="Cabin" style={bannerStyle}>
           <Link to="/rooms" className="btn-primary">
             our rooms
           </Link>
@@ -16,6 +24,7 @@ const Home = () => {
       </Carousel>
       <Services />
     </div>
+    
   );
 };
 

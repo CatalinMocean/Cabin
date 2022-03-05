@@ -1,8 +1,8 @@
 import React from "react";
 
-const Banner = ({ children, title, subtitle }) => {
+const Banner = ({ children, title, subtitle, style }) => {
   return (
-    <div className="banner">
+    <div className="banner" style={style}>
       <h1>{title}</h1>
       <div />
       <p>{subtitle}</p>
